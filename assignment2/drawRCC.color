@@ -1,0 +1,11 @@
+*fontList:  9x15
+*topLabel.background: Yellow
+*topLabel.foreground: Black
+*XwPy*background: Pink
+*XwPy*foreground: Black
+*startEnd*background: Orange
+*startEnd*foreground: Black
+*quitControl*background: Blue
+!*XmPushButton*background:  Yellow
+!*XmPushButton*foreground:  Black
+

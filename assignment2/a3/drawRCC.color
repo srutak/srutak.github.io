@@ -1,0 +1,11 @@
+*fontList:  andy22i
+*topLabel.background: Yellow
+*topLabel.foreground: Red
+*XwPy*background: Red
+*XwPy*foreground: White
+*drawShapes*background: Red
+*startEnd*background: Purple
+*quitControl*background: Blue
+!*XmPushButton*background:  Yellow
+!*XmPushButton*foreground:  Black
+

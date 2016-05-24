@@ -1,0 +1,75 @@
+#! /bin/sh
+getent passwd | awk -F: '$2=="*"'|cut -d: -f1,4,5 | sort -u  > passwd_file
+getent group |awk -F: '$2=="*"' |  cut  -d:  -f1,3 | sort -u  > tempgroups
+if  test $# -eq 0
+then
+echo "-----------------------"
+echo "Group :	 Count"
+echo "-----------------------"
+for i in `cat tempgroups`
+do
+        Namegroup=`echo $i | cut -d: -f1`
+        Numgroup=`echo $i | cut -d: -f2`
+	
+	groupCount=`egrep ":$Numgroup:" passwd_file | wc -l `
+		if test $groupCount -ge 6
+		then
+         
+		echo $groupCount ":" $Namegroup >> data
+		fi
+done
+sort -nr data | awk '{print $3 ":" $1}'
+echo "----------------------"
+echo "Number of groups = " `cat data | wc -l`
+echo "----------------------"
+rm data
+else
+if [ "$#" -eq 2 ]
+    then	
+      if [ "$1" = "-f" ]
+        then
+          inputfile="$2"
+	  nameslogins="$2""-NamesLogins"
+          emails="$2""-Emails"
+          nomatch="$2""-NoMatch"
+          rm $nameslogins
+          rm $emails
+          rm $nomatch
+          while read -r line
+          do
+            name=$line
+            first=`echo $name | cut -d ' ' -f2`
+	    last=`echo $name | cut -d ' ' -f1`
+	    fullname=`echo $first" "$last`  
+             grep -i "$fullname" passwd_file|  awk -F: '{print $3":"$1}' >> $nameslogins
+             grep -i "$fullname" passwd_file|  awk -F: '{print $1"@cs.odu.edu ;"}' >> $emails
+            count=`grep -i "$fullname" passwd_file|wc -l`
+            if [ $count -eq 0 ]
+	       then
+                 echo $fullname | awk '{print tolower($0)}' >> $nomatch
+            fi
+          done < "$inputfile"
+echo "Match ="`cat "$2"-NamesLogins | wc -l`
+echo "No Match =" `cat "$2"-Emails | wc -l`
+echo "See files under the current directory \n\t "$2"-Emails \n\t"$2"-NamesLogins \n\t "$2"-NoMatch"
+      elif [ "$1" = "-g" ]
+        then
+	   namesfile="$2""-NamesLogins"
+           emailsfile="$2""-Emails"
+           rm $namesfile
+           rm $emailsfile
+           groupnumber=`cat tempgroups| awk -F: -v g="$2" '$1==g' | awk -F: '{print $2}'`
+           getent passwd| awk -F: '$2=="*"' | awk -F: -v n="$groupnumber" '$4==n {print $5":"$1}' >> $namesfile
+           getent passwd| awk -F: '$2=="*"' | awk -F: -v n="$groupnumber" '$4==n {print $1"@cs.odu.edu ;"}' >> $emailsfile
+echo ""$2":count =" `cat "$2"-NamesLogins | wc -l`
+echo "See files under the current directory \n\t "$2"-NamesLogins\n\t"$2"-Emails"
+else
+echo "Use either geni -f <filename> or geni -g <groupname>"
+fi
+  else 
+echo "Usage is either geni or geni -f <filename> or geni -g <groupname> to run the script"
+fi
+fi
+rm passwd_file
+rm tempgroups
+

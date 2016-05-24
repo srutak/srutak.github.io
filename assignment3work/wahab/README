@@ -1,0 +1,12 @@
+A3: Dr. wahab solution
+To run server:
+% panserver 10111
+To run clients:
+% panclient localhost 10111
+% audclient localhost 10111 
+
+To create xterms with 2 pancliens and 2 audclients:
+% runtclients.sh localhost 10111 2
+
+To clean up the left over processes:
+% cleanup.sh

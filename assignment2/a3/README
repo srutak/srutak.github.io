@@ -1,0 +1,8 @@
+A3: Dr. wahab solution
+To run server:
+% unoserver 10123
+To run clients:
+% tclient localhost 10123
+% tclient localhost 10123 a
+To create xterms with 2 actors and 2 audiences clients:
+% Runtclients localhost 10123 2

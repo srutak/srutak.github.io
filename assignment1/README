@@ -1,0 +1,8 @@
+This is Kasula Sruta Keerti's submisssion
+The files created are under:
+current file directory
+To execute:
+% ./geni
+The above command takes time to display the output
+% ./geni -f 772List
+% ./geni -g faculty

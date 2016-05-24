@@ -1,0 +1,21 @@
+
+#define SA struct sockaddr
+#include <arpa/inet.h>
+#include <errno.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/in_systm.h>
+#include <netinet/ip.h>
+#include <netinet/ip_icmp.h>
+#include <pthread.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <strings.h>
+#include <sys/file.h>
+#include <sys/param.h>
+#include <sys/socket.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+void exit();
