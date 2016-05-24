@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1428697436 source:z:\bio_informatics\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<stdlib.h>
+	<iomanip>
+	<string>
+
+1428116274 source:d:\bio_informatics\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<vector>
+	<stdlib.h>
+	<iomanip>
+
