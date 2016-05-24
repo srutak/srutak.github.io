@@ -1,0 +1,17 @@
+Instructions to run the program:
+
+1. Download and extract the files to public_html folder. Copy these files to rocks.cs.odu.edu.
+2. Type make to create the executables. 
+mpi-ring: point-to-point message passing ring algorithm.
+mpi-star: point-to-point message passing star algorithm.
+mpi-coll: The collective broadcast operation provided by the MPI.
+3.  To run the program type mpirun -np 2 mpi-ring 1 i.e., mpirun -np (number of processes) (name of the executable) (size of message)
+4. once the program is run it displays the total time taken by the MPI program.
+
+The Excel sheet named message passing contains all the data of ring, star and collective broadcast named in the three different worksheets.
+
+References:
+http://stackoverflow.com/questions/5298739/mpi-global-execution-time
+http://stackoverflow.com/questions/14813595/how-to-use-mpi-reduce-to-sum-different-values-from-different-groups-of-processor
+http://mpitutorial.com/tutorials/mpi-broadcast-and-collective-communication/
+http://stackoverflow.com/questions/7864075/using-mpi-bcast-for-mpi-communication

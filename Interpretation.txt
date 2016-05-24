@@ -1,0 +1,13 @@
+A short interpretation of your results:
+
+There are 3 graphs plotted:
+Message size of 1 byte:
+From the graph(1byte.fig) it can seen that as the number of processors are increased the time taken for message passing increases, for all the three types of message passing. The highest values of all the three scenarios have the values very near to each other.
+
+Message size of 1M byte:
+From the graph(1Mbyte.fig) it can seen that as the number of processors are increased the time taken for point-to-point message passing (ring and star) increases drastically, whereas the time taken for collective broadcast also increases but the highest value is very less compared to other two. The maximum value for ring is 3.771744; star is 4.62027; and collective broadcast is 1.19747
+
+Message size of 100M byte:
+From the graph(100Mbyte.fig) it can seen that as the number of processors are increased the time taken for point-to-point message passing (ring and star) increases drastically almost both ring and star increases equally, whereas the collective broadcast values for time almost remains constant when the values of collective broadcast are compared with point-to-point message passing. The maximum value for ring is 198.499786; star is 190.825333; and collective broadcast is 1.245743.
+
+From the above values we can see that initially when the size of the message is less i.e., 1 byte all the three algorithms behave similar. As the message size is increased the time taken by the point-to-point message passing values increase a lot such that the collective broadcast values seems constant. There is no impact of increase in the message size on the time taken by the collective broadcast i.e., there is no substantial increase in the time taken by the collective broadcast when the size of the message is increased from 1 byte to 1M byte and to 100M byte.

@@ -1,0 +1,8 @@
+A short explanation of why your time measurement method is accurate. this includes figuring out how and when to start and to stop the measurements:
+
+I have used MPI_Wtime that returns the elapsed time. start timer, MPI_Wtime has been used after MPI_INIT that initialises the MPI execution environment and end timer, 
+MPI_Wtime is used before MPI_Finalize that terminates the MPI Execution environment and the difference of these two values (endtime-starttime) gives the total time
+taken by the process.
+In the MPI code there are many parallel processes running and MPI_INIT() and MPI_Finalize() does not define beginning and ending of the parallel execution but it 
+defines where the beginning and ending of MPI calls are allowed. Since the processes run in parallel from beginning to ending, when we use MPI_Wtime, it calculates 
+each process timing. Since all the processes run in parallel we need to consider the maximum time taken by the processes, so I have considered MPI_Reduce which calculates the maximum time taken among all the processes. MPI_Reduce reduces multiple processes value to a single value i.e., in this case maximum value which is defined in MPI_Reduce as MPI_MAX in operations field. Since this program considers the maximum time taken by the parallel running processes, the time measurement is accurate.
