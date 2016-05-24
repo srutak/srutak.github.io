@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Analysis of ODU fee structure</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="http://blackrockdigital.github.io/startbootstrap-simple-sidebar/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body style="background-color:#D8D8D8">
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" style="background-color:#0C2238;">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index.html" style="font-size:19px">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="intro.html" style="font-size:19px">Introduction</a>
+                </li>
+                <li>
+                    <a href="team.html" style="font-size:19px">Team Members</a>
+                </li>
+                <li>
+                    <a href="vis.html" style="font-size:19px">Visualizations</a>
+                </li>
+                <li>
+                    <a href="pres.html" style="font-size:19px">Presentation and Demo</a>
+                </li>
+                <li>
+                    <a href="data.html" style="font-size:19px">Data Used</a>
+                </li>
+                <li>
+                    <a href="refer.html" style="font-size:19px">References</a>
+                </li>
+				<li>
+                    <a href="tools.html" style="font-size:19px">Tools Used</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+
+                      <a href="#menu-toggle" class="btn btn-default" id="menu-toggle" style="background-color:#0C2238; font-size:19px; color:grey"><b>Hide/View Menu</b></a>
+						<h1>VISUALIZATIONS</h1>
+						<div>
+						<a href="http://bl.ocks.org/srutak/raw/5ab8c32dd054bfdfda023cdc954ceee9/"><button id="task1" style=" font-size:19px" class="btn btn-success">Comparison of ODU fee Structure with universities in Virginia</button></a>
+						</div></br><p style=" font-size:19px"><b>Visualization 1:</b> </br>
+						This Visualization is used to help the users compare ODU's tuition fee with other universities tuition.
+						Users can click on the university markers to study the comparison.
+						Public and private universities are identified with different hues.
+						University markers are provided with different hues to distinguish between public and private universities.
+					
+				       We have integrated Google maps for easy identification of the universities.</br></br>
+					   <b>Visualization2:</b></br>
+					   We provided an option to the users to study the fee structure of individual public and private universities. 
+Horizontal grouped bar charts are made interactive by enabling the users to select/deselect items on legend to view visualizations of their choice.		
+Users can view details on demand by hovering over the bars.	
+. </p></br>
+						<div>
+						<a href="http://bl.ocks.org/sindhujagadde/raw/df9fde96a9992e9d56960b86f5375f91/"><button id="task2" style="font-size:19px" class="btn btn-success">Mandatory vs Tuition</button></a>
+						</div></br>
+						<p style=" font-size:19px">Every student pays mandatory fee along with tuition fee. This visualization helps in studying their division across different years.
+						Juxtapose views are used for easy comparison. Users can also view the details on demand by hovering. 
+						</p></br>
+						<div>
+						<a href="http://bl.ocks.org/sindhujagadde/raw/c43fd641e5d46396defc735e5dde6eb0/"><button id="task21" style=" font-size:19px" class="btn btn-success">Breakdown of Mandatory Fee</button></a>
+						</div></br><p style=" font-size:19px">
+						Mandatory fee consists of the following divisions: 
+						<ul style=" font-size:19px"><li>International Student HealthInsurance.</li>
+						<li>International Student fee.</li>
+<li>Transportation Fee</li>
+<li>Student Health Fee</li>
+<li>General Services Fee</li>
+<li>New Student Transition Fee</li>
+<li>Technology Delivered Course</li>
+</ul>
+<p style=" font-size:19px">Stacked bar charts are used to study how these divisions vary in different years.
+Also switch view option is provided to help the users study the mandatory fee trend altogether.</p>
+
+</p></br>
+						<div>
+						<a href="http://bl.ocks.org/sindhujagadde/raw/349552338fa25e52a8308121c8157713/"><button id="task3" style=" font-size:19px" class="btn btn-success">Tuition trend over the years</button></a>
+						</div></br><p style=" font-size:19px">Line charts are typically used to study the trend. We have implemented interactive line charts to study the tuition trend of graduates, undergraduates both instate and outstate over the years.
+						Users can select/ deselect to view visualizations of their choice.
+						A bar chart is provided at the bottom to know the current tuition. 
+						
+						</p></br>
+                    
+					</div>
+                </div>
+            </div>
+        </div>
+
+    <script src="http://blackrockdigital.github.io/startbootstrap-simple-sidebar/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="http://blackrockdigital.github.io/startbootstrap-simple-sidebar/js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
