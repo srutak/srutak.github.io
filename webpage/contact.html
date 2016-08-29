@@ -1,0 +1,30 @@
+	<div class="tab-content">
+	<div id="contact"  class="tab-pane fade">
+
+	<div data-ng-controller="help">
+  <div id="messages" class="alert alert-success" data-ng-show="messages" data-ng-bind="messages">Please enter your details in the required fields:</div>
+  <form name="helpForm" novalidate role="form" enctype="text/plain" method="post" action="MAILTO:skasula@odu.edu">
+    <div class="form-group">
+      <label for="name">Your Name </label>
+
+      <span ng-show="myForm.user.$error.required">Username is required.</span>
+      <input id="text" name="name" data-ng-model="name" class="form-control" required  placeholder="Enter your name" />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Your E-mail address</label>
+      <span class="label label-danger">Required!</span>
+      <input id="email" name="email" data-ng-model="email" class="form-control" required placeholder="Enter your Email ID"/>  
+    </div>
+
+    <div class="form-group">
+      <label for="comments">Your Question?</label>
+      <span class="label label-danger">Required!</span>
+      <textarea id="comments" data-ng-model="comments" class="form-control" required placeholder="Enter your question here..."></textarea>
+    </div>
+
+    <button class="btn btn-danger" onclick="window.alert('Your query is sent.')">Submit</button>
+  </form>
+</div>
+	</div>
+	</div>

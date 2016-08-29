@@ -1,0 +1,214 @@
+<html ng-app="app">
+    <header class="intro-header">
+        <title>Introduction</title>
+ 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<h1>Sruta Keerti Kasula</h1>
+<p class="lead">
+      Masters in Computer Science<br>
+  Old Dominion University 
+  </p>
+    </header>
+			     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    
+    
+    <link rel='stylesheet prefetch' href='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.css'>
+<link rel='stylesheet prefetch' href='https://material.angularjs.org/1.0.8/docs.css'>
+
+        <link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-css.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+<script src= "angular.js"></script>
+<body style="background-color: transparent ; font-family: cambria">
+	<div class="container-fluid" ng-controller="wish">
+<p> <strong> Hello.....{{greeting}} </strong> </p>
+  <hr><div>
+        Please click on below Agreement to proceed:</br><input ng-model="checked" type="checkbox">  I agree not to disclose the information.</br>
+<section ng-app="" ng-init="checked">
+<div ng-show="checked"> Thank you for agreeing!
+</br>
+</br>
+
+ You can click on the below buttons to know more about me:</br></br>
+							<a href="#about" data-toggle="pill" ng-class="{selected: tab==1}" ng-click="tab===1" class="btn btn-success" style="font-family: cursive">
+								About  Me
+                            </a> 
+							<a href="#myinfo" data-toggle="pill" ng-class="{selected: tab==2}" ng-click="tab===2" class="btn btn-primary" style="font-family: cursive">
+								Professional  Information
+                            </a> 
+							<a href="#edu" data-toggle="pill" ng-class="{selected: tab==3}" ng-click="tab===3" class="btn btn-warning" style="font-family: cursive">
+								Educational  Details
+                            </a>
+							<a href="#project" data-toggle="pill" ng-class="{selected: tab==4}" ng-click="tab===4" class="btn btn-info" style="font-family: cursive">
+								Course Projects
+                            </a></br>
+        
+ <div class="tab-content">
+    <div id="about"  class="tab-pane fade">
+         <h3><u>About Me</u></h3>
+         <p>I am born and brought up in India.<br/> <h3><u>Hobbies:</u></h3>
+
+
+
+    <div>
+  <md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs="" flex-gt-xs="33" layout="column">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Crafting</span>
+            <img src="http://img06.deviantart.net/a991/i/2013/121/6/9/kanzashi_flower_01_by_g_h5-d5j1jtv.jpg" height="14" width="4" >
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content layout="row" layout-align="space-between">
+          <div class="md-media-xl card-media"></div>
+        </md-card-content>
+      </md-card>
+    </div>
+     <div flex-xs="" flex-gt-xs="33" layout="column">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Photography</span>
+            <img src="https://static.pexels.com/photos/4700/nature-forest-moss-leaves.jpg" height="14" width="4" >
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content layout="row" layout-align="space-between">
+          <div class="md-media-xl card-media"></div>
+        </md-card-content>
+      </md-card>
+    </div>
+	    <div flex-xs="" flex-gt-xs="33" layout="column">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Listening to Music</span>
+            <img src="https://static.pexels.com/photos/6966/abstract-music-rock-bw.jpg" height="14" width="4" >
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content layout="row" layout-align="space-between">
+          <div class="md-media-xl card-media"></div>
+        </md-card-content>
+      </md-card>
+    </div>
+	</div>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/svg-assets-cache.js'></script>
+<script src='https://cdn.gitcdn.link/cdn/angular/bower-material/v1.0.8/angular-material.js'></script>
+
+        <script src="js/index.js"></script>
+</p>
+    </div>
+    <div id="myinfo"  class="tab-pane fade" ng-controller="ksk">
+        <h3><u>Professional Details</u></h3>
+        <p>Have more than 5 years of work experience. Below is the brief summary:</p>
+		<p> <u><i>You can click on the below names to find more about the organisation.</i></u></p>
+        <img src="Wipro_logo.png" height="42" width="42" > <a href="http://www.wipro.com/" target="_blank"> <b> {{job1}}</b></a></br>
+		<ul><b><u><h4>{{desc}}</h4></u></b>
+		<li ng-repeat="x in desc1">
+		{{x}}
+		</li></ul>
+        <img src="ODU_logo.png" height="42" width="42"><a href="https://www.odu.edu/#prospective" target="_blank"><strong> {{job2}}</strong> </a>
+        <ul><b><u><h4>{{descr1}}</h4></u></b>
+		<li ng-repeat="x in desc2">
+		{{x}}
+		</li></ul>
+    <ul><b><u><h4>{{descr2}}</h4></u></b>
+	<li><u>{{subj1}}</u></li>
+		<ul><li ng-repeat="x in desc3">
+		{{x}}
+		</li></ul>
+		<li><u>{{subj2}}</u></li>
+		<ul><li ng-repeat="x in desc4">
+		{{x}}
+		</li></ul></ul>
+		
+		<h4><img src="gold-trophy.png" height="42" width="42"><b><u>Awards and Recognitions</h4></u></b>
+		<ul>
+		<li>{{subj4}}</li>
+		<ul>
+		<li>
+		{{desc5}}</li>
+		</ul>
+		<li>{{subj3}}</li>
+		<ul>
+		<li ng-repeat="x in desc6">
+		{{x}}
+		</li></ul>
+	</ul>
+            </div>
+        <div id="edu"  class="tab-pane fade" ng-controller="ed">
+         <h3><u>Educational Details</u></h3>
+		  <ul><li><p><b>{{clg2}}</b></li>
+		  <u>Courses taken:</u><ul><li ng-repeat = "name in list">{{name}}</li></p></ul>
+		  <li><b>{{clg1}}</b></li></br>
+		  <li><b>{{clg3}}</b></li></ul>
+     
+    </div>
+<div id="project"  class="tab-pane fade" ng-controller="proj">
+<div><h3>{{proj1}}</h3>
+<h4>Tools and Technologies used:</h4> <p style="color:#2B65EC">{{t1}}</p>
+<h4><u>Project Description:</u></h4>
+<ul><li ng-repeat = "x in desc1">{{x}}</li></ul>
+</div>
+<div><h3>{{proj2}}</h3>
+<h4>Tools and Technologies used:</h4> <p style="color:#2B65EC">{{t2}}</p>
+<h4><u>Project Description:</u></h4>
+<ul><li ng-repeat = "x in desc2">{{x}}</li></ul>
+</div>
+<div><h3>{{proj3}}</h3>
+<h4>Tools and Technologies used:</h4> <p style="color:#2B65EC">{{t3}}</p>
+<h4><u>Project Description:</u></h4>
+<ul><li ng-repeat = "x in desc3">{{x}}</li></ul>
+</div>
+<div><h3>{{proj4}}</h3>
+<h4>Tools and Technologies used:</h4> <p style="color:#2B65EC">{{t4}}</p>
+<h4><u>Project Description:</u></h4>
+<ul><li ng-repeat = "x in desc4">{{x}}</li></ul>
+</div>
+<div><h3>{{proj5}}</h3>
+<h4>Tools and Technologies used:</h4> <p style="color:#2B65EC">{{t5}}</p>
+<h4><u>Project Description:</u></h4>
+<ul><li ng-repeat = "x in desc5">{{x}}</li></ul>
+</div>
+<div><h3>{{proj6}}</h3>
+<h4>Tools and Technologies used:</h4> <p style="color:#2B65EC">{{t6}}</p>
+<h4><u>Project Description:</u></h4>
+<ul><li ng-repeat = "x in desc6">{{x}}</li></ul>
+</div>
+</div>
+	
+		<div class="container">
+    <div class="row-fluid">
+        <div class="span4">
+            <p>&copy; 2015 . All rights reserved</p>
+        </div>
+        <div class="span4 text-center">
+            <ul class="nav inline">
+                <p>For further information:
+		<a href="mailto:skasula@odu.edu">
+          <span class="glyphicon glyphicon-envelope" style="font-size:16"> E-Mail </span>
+        </a>
+                </p> 
+           </ul>
+        </div>
+        <div class="span4 text-right">
+            <p>Designed by Keerti</p></div></section>
+	
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
